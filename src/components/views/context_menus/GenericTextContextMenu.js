@@ -1,5 +1,5 @@
 /*
-Copyright 2015, 2016 OpenMarket Ltd
+Copyright 2017 Michael Telatynski <7t3chguy@gmail.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,22 +14,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-.mx_BaseAvatar {
-    position: relative;
-}
+'use strict';
 
-.mx_BaseAvatar_initial {
-    position: absolute;
-    left: 0px;
-    color: $avatar-initial-color;
-    text-align: center;
-    speak: none;
-    pointer-events: none;
-    font-weight: normal;
-}
+import React from 'react';
+import PropTypes from 'prop-types';
 
-.mx_BaseAvatar_image {
-    border-radius: 40px;
-    vertical-align: top;
-    background-color: #fff;
+export default class GenericTextContextMenu extends React.Component {
+    static PropTypes = {
+        message: PropTypes.string.isRequired,
+    };
+
+    render() {
+        return <div>{ this.props.message }</div>;
+    }
 }
